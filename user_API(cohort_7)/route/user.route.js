@@ -4,7 +4,7 @@ const {createUser, loginUser, deleteUser} = require("../controller/user.controll
 
 route.post("/user", createUser);
 route.post("/user", loginUser);
-route.delete("/user", deleteUser)
+route.delete("/user/:id", deleteUser)
 
 module.exports = route;
 
