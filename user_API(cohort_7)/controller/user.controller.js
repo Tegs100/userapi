@@ -7,7 +7,7 @@ const createUser = async(req, res) => {
   //salt the password
   const salt = bcrypt.genSaltSync(10);
   //hash the password
-  const hashedPassword = await bcrypt.hash(password, salt);
+  const hashedPassword = bcrypt.hashSync(password, salt);
   console.log(hashedPassword);
   //validating user credentials: using email
   const validateUser = await userModel.findOne({email: others.email});
